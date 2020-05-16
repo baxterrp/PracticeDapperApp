@@ -1,0 +1,23 @@
+﻿@model PracticeDapperApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "ShowUser";
+}
+
+<h2>ShowUser</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <p>@Model.Id</p>
+
+    <h1>@Model.Name</h1>
+    <h2>@Model.Email</h2>    
+    <h2>@Model.Address.Street</h2>
+    <h2>@Model.Address.GetAddressLineTwo()</h2>
+        
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,38 @@
+﻿@model PracticeDapperApp.Models.UserModel
+
+@{
+    ViewData["Title"] = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+<h4>UserModel</h4>
+<form asp-action="CreateUser" asp-controller="Home">
+    <label asp-for="Name.First">First Name</label>
+    <input asp-for="Name.First" />
+
+    <label asp-for="Name.Last">Last Name</label>
+    <input asp-for="Name.Last" />
+
+    <label asp-for="Email">Email</label>
+    <input asp-for="Email" />
+
+    <label asp-for="Address.Street">Address</label>
+    <input asp-for="Address.Street" />
+
+    <label asp-for="Address.City">City</label>
+    <input asp-for="Address.City" />
+
+    <label asp-for="Address.State">State</label>
+    <input asp-for="Address.State" />
+
+    <label asp-for="Address.ZipCode">Zip</label>
+    <input asp-for="Address.ZipCode" />
+
+    <button>Create User</button>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
